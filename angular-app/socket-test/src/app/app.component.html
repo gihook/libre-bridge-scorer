@@ -1,0 +1,28 @@
+Message: {{ message }} Results:
+<div *ngFor="let entry of entries">
+    Board: {{ entry.board }}
+    <table>
+        <tr *ngFor="let result of entry.results">
+            <td>{{ result.pair }}</td>
+            <td>{{ result.score }}</td>
+            <td>{{ result.nsPercentage | percent:'2.2-5' }}</td>
+            <td>{{ result.ewPercentage | percent:'2.2-5' }}</td>
+            <td>{{ result.nsMps }}</td>
+            <td>{{ result.ewMps }}</td>
+        </tr>
+    </table>
+</div>
+<input type="text" [(ngModel)]="text">
+<button (click)="send()">Send</button>
+
+<style>
+    table {
+        border: 1px solid black;
+        width: 90vw;
+    }
+
+    tr,
+    td {
+        border: 1px solid black;
+    }
+</style>
