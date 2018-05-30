@@ -45,7 +45,7 @@ function getResults(array) {
 
 function getSingleResult(item) {
     return {
-        score: item[0] || -item[1],
+        score: +item[0] || -item[1],
         nsPair: item[9],
         ewPair: item[10]
     }
