@@ -15,18 +15,6 @@ let mappedTestData = testData.map(x => {
     return x;
 });
 
-// let results = [
-//     { pair: 1, score: 50 },
-//     { pair: 2, score: -460 },
-//     { pair: 3, score: -460 },
-//     { pair: 4, score: 50 },
-//     { pair: 5, score: -460 },
-//     { pair: 6, score: -430 },
-//     { pair: 7, score: -430 },
-//     { pair: 8, score: -430 },
-//     { pair: 9, score: -430 },
-// ]
-
 let testMockResults = [
     { pair: 1, score: -510 },
     { pair: 2, score: -1010 },
