@@ -1,0 +1,239 @@
+{
+    "type": "howell4",
+    "numberOfBoards": 28,
+    "pairs": [
+        { "id": 1, "players": [ "Irena JEZ", "Irena CIJAN"] },
+        { "id": 2, "players": [ "Lina JELEN", "Nusa GOSNIK"] },
+        { "id": 3, "players": [ "Romana GUNZEK", "Miro SITER"] },
+        { "id": 4, "players": [ "Joze GROZNIK", "Dusan VUKIC"] },
+        { "id": 5, "players": [ "Jurij MOGILNICKI", "Karel STIGLIC"] },
+        { "id": 6, "players": [ "Viljem JELEN", "Nevenka OMLADIC"] },
+        { "id": 7, "players": [ "Stane GOSNIK", "Mirjana BELAK"] }
+    ],
+    "boards": [
+        {
+            "boardNumber": 28,
+            "results": [
+                { "nsPair": 2, "ewPair": 4, "contract": "1h", "declarer": "n", "score": -100 },
+                { "nsPair": 6, "ewPair": 5, "contract": "1n", "declarer": "s", "score": -120 },
+                { "nsPair": 3, "ewPair": 7, "contract": "3s", "declarer": "w", "score": -140 }
+            ]
+        },
+        {
+            "boardNumber": 27,
+            "results": [
+                { "nsPair": 2, "ewPair": 4, "contract": "3n", "declarer": "n", "score": 460 },
+                { "nsPair": 6, "ewPair": 5, "contract": "3n", "declarer": "n", "score": 460 },
+                { "nsPair": 3, "ewPair": 7, "contract": "3s", "declarer": "s", "score": -50 }
+            ]
+        },
+        {
+            "boardNumber": 26,
+            "results": [
+                { "nsPair": 6, "ewPair": 5, "contract": "4h", "declarer": "s", "score": 620 },
+                { "nsPair": 2, "ewPair": 4, "contract": "3n", "declarer": "n", "score": 600 },
+                { "nsPair": 3, "ewPair": 7, "contract": "2s", "declarer": "s", "score": -100 }
+            ]
+        },
+        {
+            "boardNumber": 25,
+            "results": [
+                { "nsPair": 3, "ewPair": 7, "contract": "3s", "declarer": "n", "score": -200 },
+                { "nsPair": 2, "ewPair": 4, "contract": "3n", "declarer": "w", "score": -600 },
+                { "nsPair": 6, "ewPair": 5, "contract": "4sx", "declarer": "n", "score": -800 }
+            ]
+        },
+        {
+            "boardNumber": 24,
+            "results": [
+                { "nsPair": 6, "ewPair": 4, "contract": "4s", "declarer": "n", "score": 420 },
+                { "nsPair": 5, "ewPair": 2, "contract": "4dx", "declarer": "e", "score": 300 },
+                { "nsPair": 7, "ewPair": 1, "contract": "3h", "declarer": "s", "score": -150 }
+            ]
+        },
+        {
+            "boardNumber": 23,
+            "results": [
+                { "nsPair": 7, "ewPair": 1, "contract": "4s", "declarer": "e", "score": -620 },
+                { "nsPair": 6, "ewPair": 4, "contract": "3n", "declarer": "w", "score": -630 },
+                { "nsPair": 5, "ewPair": 2, "contract": "4s", "declarer": "e", "score": -650 }
+            ]
+        },
+        {
+            "boardNumber": 22,
+            "results": [
+                { "nsPair": 5, "ewPair": 2, "contract": "4h", "declarer": "w", "score": 100 },
+                { "nsPair": 6, "ewPair": 4, "contract": "4d", "declarer": "s", "score": -150 },
+                { "nsPair": 7, "ewPair": 1, "contract": "3h", "declarer": "w", "score": -170 }
+            ]
+        },
+        {
+            "boardNumber": 21,
+            "results": [
+                { "nsPair": 5, "ewPair": 2, "contract": "3n", "declarer": "e", "score": -400 },
+                { "nsPair": 7, "ewPair": 1, "contract": "3n", "declarer": "e", "score": -430 },
+                { "nsPair": 6, "ewPair": 4, "contract": "3n", "declarer": "w", "score": -430 }
+            ]
+        },
+        {
+            "boardNumber": 20,
+            "results": [
+                { "nsPair": 2, "ewPair": 7, "contract": "3n", "declarer": "n", "score": 660 },
+                { "nsPair": 4, "ewPair": 3, "contract": "2d", "declarer": "s", "score": 90 },
+                { "nsPair": 5, "ewPair": 1, "contract": "3n", "declarer": "n", "score": -200 }
+            ]
+        },
+        {
+            "boardNumber": 19,
+            "results": [
+                { "nsPair": 5, "ewPair": 1, "contract": "6sx", "declarer": "s", "score": 1210 },
+                { "nsPair": 2, "ewPair": 7, "contract": "6s", "declarer": "s", "score": 980 },
+                { "nsPair": 4, "ewPair": 3, "contract": "6s", "declarer": "s", "score": -50 }
+            ]
+        },
+        {
+            "boardNumber": 18,
+            "results": [
+                { "nsPair": 2, "ewPair": 7, "contract": "1n", "declarer": "e", "score": 50 },
+                { "nsPair": 5, "ewPair": 1, "contract": "1n", "declarer": "e", "score": -90 },
+                { "nsPair": 4, "ewPair": 3, "contract": "2s", "declarer": "w", "score": -110 }
+            ]
+        },
+        {
+            "boardNumber": 17,
+            "results": [
+                { "nsPair": 4, "ewPair": 3, "contract": "1n", "declarer": "s", "score": 90 },
+                { "nsPair": 2, "ewPair": 7, "contract": "1n", "declarer": "s", "score": 90 },
+                { "nsPair": 5, "ewPair": 1, "contract": "1n", "declarer": "s", "score": 90 }
+            ]
+        },
+        {
+            "boardNumber": 16,
+            "results": [
+                { "nsPair": 1, "ewPair": 6, "contract": "6n", "declarer": "w", "score": 100 },
+                { "nsPair": 7, "ewPair": 4, "contract": "3n", "declarer": "w", "score": -690 },
+                { "nsPair": 2, "ewPair": 3, "contract": "3n", "declarer": "w", "score": -690 }
+            ]
+        },
+        {
+            "boardNumber": 15,
+            "results": [
+                { "nsPair": 1, "ewPair": 6, "contract": "3nx", "declarer": "n", "score": 950 },
+                { "nsPair": 7, "ewPair": 4, "contract": "3n", "declarer": "n", "score": 660 },
+                { "nsPair": 2, "ewPair": 3, "contract": "3n", "declarer": "n", "score": 600 }
+            ]
+        },
+        {
+            "boardNumber": 14,
+            "results": [
+                { "nsPair": 1, "ewPair": 6, "contract": "1n", "declarer": "n", "score": 150 },
+                { "nsPair": 2, "ewPair": 3, "contract": "4s", "declarer": "s", "score": -50 },
+                { "nsPair": 7, "ewPair": 4, "contract": "2h", "declarer": "e", "score": -110 }
+            ]
+        },
+        {
+            "boardNumber": 13,
+            "results": [
+                { "nsPair": 2, "ewPair": 3, "contract": "3d", "declarer": "e", "score": -170 },
+                { "nsPair": 1, "ewPair": 6, "contract": "3s", "declarer": "e", "score": -170 },
+                { "nsPair": 7, "ewPair": 4, "contract": "5d", "declarer": "e", "score": -620 }
+            ]
+        },
+        {
+            "boardNumber": 12,
+            "results": [
+                { "nsPair": 3, "ewPair": 5, "contract": "5h", "declarer": "s", "score": 650 },
+                { "nsPair": 4, "ewPair": 1, "contract": "6dx", "declarer": "e", "score": 500 },
+                { "nsPair": 7, "ewPair": 6, "contract": "5d", "declarer": "e", "score": 100 }
+            ]
+        },
+        {
+            "boardNumber": 11,
+            "results": [
+                { "nsPair": 4, "ewPair": 1, "contract": "3n", "declarer": "e", "score": -460 },
+                { "nsPair": 3, "ewPair": 5, "contract": "3n", "declarer": "w", "score": -490 },
+                { "nsPair": 7, "ewPair": 6, "contract": "6c", "declarer": "w", "score": -940 }
+            ]
+        },
+        {
+            "boardNumber": 10,
+            "results": [
+                { "nsPair": 7, "ewPair": 6, "contract": "4s", "declarer": "w", "score": 300 },
+                { "nsPair": 3, "ewPair": 5, "contract": "3s", "declarer": "w", "score": 100 },
+                { "nsPair": 4, "ewPair": 1, "contract": "3s", "declarer": "w", "score": 100 }
+            ]
+        },
+        {
+            "boardNumber": 9,
+            "results": [
+                { "nsPair": 3, "ewPair": 5, "contract": "4s", "declarer": "e", "score": -620 },
+                { "nsPair": 7, "ewPair": 6, "contract": "5s", "declarer": "e", "score": -650 },
+                { "nsPair": 4, "ewPair": 1, "contract": "5s", "declarer": "e", "score": -710 }
+            ]
+        },
+        {
+            "boardNumber": 8,
+            "results": [
+                { "nsPair": 6, "ewPair": 2, "contract": "5c", "declarer": "n", "score": 400 },
+                { "nsPair": 1, "ewPair": 3, "contract": "5c", "declarer": "n", "score": 400 },
+                { "nsPair": 4, "ewPair": 5, "contract": "4s", "declarer": "w", "score": 50 }
+            ]
+        },
+        {
+            "boardNumber": 7,
+            "results": [
+                { "nsPair": 4, "ewPair": 5, "contract": "2s", "declarer": "s", "score": 140 },
+                { "nsPair": 1, "ewPair": 3, "contract": "4s", "declarer": "s", "score": -100 },
+                { "nsPair": 6, "ewPair": 2, "contract": "4s", "declarer": "s", "score": -100 }
+            ]
+        },
+        {
+            "boardNumber": 6,
+            "results": [
+                { "nsPair": 1, "ewPair": 3, "contract": "3s", "declarer": "w", "score": 300 },
+                { "nsPair": 4, "ewPair": 5, "contract": "1n", "declarer": "e", "score": 100 },
+                { "nsPair": 6, "ewPair": 2, "contract": "1n", "declarer": "e", "score": -90 }
+            ]
+        },
+        {
+            "boardNumber": 5,
+            "results": [
+                { "nsPair": 4, "ewPair": 5, "contract": "5sx", "declarer": "e", "score": 300 },
+                { "nsPair": 6, "ewPair": 2, "contract": "5h", "declarer": "n", "score": -100 },
+                { "nsPair": 1, "ewPair": 3, "contract": "6h", "declarer": "n", "score": -100 }
+            ]
+        },
+        {
+            "boardNumber": 4,
+            "results": [
+                { "nsPair": 1, "ewPair": 2, "contract": "3n", "declarer": "e", "score": 300 },
+                { "nsPair": 3, "ewPair": 6, "contract": "3n", "declarer": "e", "score": -630 },
+                { "nsPair": 5, "ewPair": 7, "contract": "3h", "declarer": "s", "score": 140 }
+            ]
+        },
+        {
+            "boardNumber": 3,
+            "results": [
+                { "nsPair": 1, "ewPair": 2, "contract": "5d", "declarer": "s", "score": 420 },
+                { "nsPair": 3, "ewPair": 6, "contract": "3d", "declarer": "s", "score": 150 },
+                { "nsPair": 5, "ewPair": 7, "contract": "3n", "declarer": "s", "score": -100 }
+            ]
+        },
+        {
+            "boardNumber": 2,
+            "results": [
+                { "nsPair": 3, "ewPair": 6, "contract": "3n", "declarer": "e", "score": -460 },
+                { "nsPair": 5, "ewPair": 7, "contract": "3n", "declarer": "w", "score": -520 },
+                { "nsPair": 1, "ewPair": 2, "contract": "6sd", "declarer": "e", "score": -1310 }
+            ]
+        },
+        {
+            "boardNumber": 1,
+            "results": [
+                { "nsPair": 5, "ewPair": 7, "contract": "5cd", "declarer": "w", "score": 100 },
+                { "nsPair": 1, "ewPair": 2, "contract": "5c", "declarer": "w", "score": 50 },
+                { "nsPair": 3, "ewPair": 6, "contract": "5c", "declarer": "w", "score": -400 }
+            ]
+        }
+    ]
+}

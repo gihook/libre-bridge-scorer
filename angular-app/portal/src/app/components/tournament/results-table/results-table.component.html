@@ -1,0 +1,63 @@
+<div *ngIf="results">
+    <div *ngFor="let board of results?.boards">
+        <h2>Board {{ board.boardNumber }}</h2>
+        <!-- <table>
+            <tr>
+                <td>NS</td>
+                <td>EW</td>
+                <td>Contract</td>
+                <td>Declarer</td>
+                <td>Result</td>
+            </tr>
+            <tr *ngFor="let result of board.results">
+                <td>
+                    <app-pair-mapper [pairs]="results.pairs" [pairId]="result.nsPair"></app-pair-mapper> ({{ result.nsPair }})
+                </td>
+                <td>{{ result.ewPair }}</td>
+                <td>{{ result.contract }}</td>
+                <td>{{ result.declarer }}</td>
+                <td>{{ result.score }}</td>
+            </tr>
+        </table> -->
+        <table mat-table [dataSource]="board.results" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="nsPair">
+                <th mat-header-cell *matHeaderCellDef>NS</th>
+                <td mat-cell *matCellDef="let result">
+                    <app-pair-mapper [pairs]="results.pairs" [pairId]="result.nsPair"></app-pair-mapper>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="ewPair">
+                <th mat-header-cell *matHeaderCellDef>EW</th>
+                <td mat-cell *matCellDef="let result">
+                    <app-pair-mapper [pairs]="results.pairs" [pairId]="result.ewPair"></app-pair-mapper>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="contract">
+                <th mat-header-cell *matHeaderCellDef>Contract</th>
+                <td mat-cell *matCellDef="let result">{{ result.contract }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="declarer">
+                <th mat-header-cell *matHeaderCellDef>Declarer</th>
+                <td mat-cell *matCellDef="let result"><span class="declarer">{{ result.declarer }}</span></td>
+            </ng-container>
+
+            <ng-container matColumnDef="score">
+                <th mat-header-cell *matHeaderCellDef>Score</th>
+                <td mat-cell *matCellDef="let result">{{ result.score }}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+
+    </div>
+</div>
