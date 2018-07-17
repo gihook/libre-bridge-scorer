@@ -14,7 +14,17 @@ app.use('/board/:number', (request, response) => {
     let boardResults = calculator.calculateMpsForSingleBoard(boardData);
     response.send(boardResults);
 });
-app.use('/results', (request, response) => response.send({ data: 'not implemented jet' }));
+app.use('/results/:id', (request, response) => {
+    let pairId = request.params['id']
+    let sum = 0;
+    for (let board of tournamentData.boards) {
+        let boardResults = calculator.calculateMpsForSingleBoard(board);
+        let mps = calculator.getMatchPoints(boardResults, pairId)
+        sum += mps
+    }
+
+    response.send({ pairId, mps: sum, percentage: sum / 96 });
+});
 app.listen(3000);
 
 

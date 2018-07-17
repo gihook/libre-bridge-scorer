@@ -3,6 +3,7 @@ const mockTournament = require('../data/tournaments/klubski-saleski.json');
 
 const calculateMpsForSingleBoard = mpCalculator.calculateMpsForSingleBoard
 const calculateMps = mpCalculator.calculateMps
+const getMatchPoints = mpCalculator.getMatchPoints
 
 describe('matchPointsCalculator test', () => {
     it('should calculate MPs for single entry', () => {

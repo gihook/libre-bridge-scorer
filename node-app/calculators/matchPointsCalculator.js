@@ -20,6 +20,16 @@ const calculateMpsForSingleBoard = board => {
     return { boardNumber: board.boardNumber, results: calculatedResults };
 }
 
+const getMatchPoints = (board, pairId) => {
+    let results = board.results
+    let entries = results.filter(x => x.nsPair == pairId || x.ewPair == pairId);
+
+    if (entries.length == 0) return 0
+    let entry = entries[0]
+    if (entry.nsPair == pairId) return entry.nsMps
+    return entry.ewMps
+}
+
 const calculateMps = (scores, index) => {
     let pairScore = scores[index]
     let totalScore = scores.reduce((a, c) => {
@@ -35,5 +45,6 @@ const calculateMps = (scores, index) => {
 
 module.exports = {
     calculateMpsForSingleBoard,
+    getMatchPoints,
     calculateMps
 }
