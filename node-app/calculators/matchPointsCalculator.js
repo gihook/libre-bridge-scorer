@@ -1,17 +1,23 @@
-const calculateMpsForSingleBoard = results => {
+const calculateMpsForSingleBoard = board => {
     let calculatedResults = []
-    let totalMatchPoints = (results.length - 1) * 2
-    let scores = results.map(x => x.score)
+    let totalMatchPoints = (board.results.length - 1) * 2
+    let scores = board.results.map(x => x.score)
 
     for (let i = 0; i < scores.length; i++) {
         let nsMps = calculateMps(scores, i)
+        let entry = board.results[i]
         calculatedResults.push({
+            nsPair: entry.nsPair,
+            ewPair: entry.ewPair,
+            contract: entry.contract,
+            declarer: entry.declarer,
+            score: entry.score,
             nsMps,
             ewMps: totalMatchPoints - nsMps
         })
     }
 
-    return calculatedResults;
+    return { boardNumber: board.boardNumber, results: calculatedResults };
 }
 
 const calculateMps = (scores, index) => {

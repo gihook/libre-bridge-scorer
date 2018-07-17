@@ -1,4 +1,5 @@
 const mpCalculator = require('./matchPointsCalculator');
+const mockTournament = require('../data/tournaments/klubski-saleski.json');
 
 const calculateMpsForSingleBoard = mpCalculator.calculateMpsForSingleBoard
 const calculateMps = mpCalculator.calculateMps
@@ -24,11 +25,8 @@ describe('matchPointsCalculator test', () => {
             { score: 170, nsMps: 0, ewMps: 4 },
             { score: 420, nsMps: 3, ewMps: 1 },
         ]
-        let results = calculateMpsForSingleBoard(boardResults.map(x => {
-            return {
-                score: x.score
-            }
-        }))
+        let result = calculateMpsForSingleBoard({ results: boardResults })
+        let results = result.results
 
         expect(boardResults.length).toBe(results.length)
 
