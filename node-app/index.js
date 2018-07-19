@@ -3,10 +3,27 @@ const http = require('http');
 const express = require('express');
 const tournamentData = require('./data/tournaments/klubski-saleski.json');
 const calculator = require('./calculators/matchPointsCalculator');
+const bodyParser = require('body-parser');
+
+const dbProvider = require('./data-access/db-provider');
+const tournamentService = require('./services/tournament-service');
 
 let allPairs = tournamentData.pairs;
 
+dbProvider.registerDb('mongodb://localhost/libre-bridge-test')
+    .then(() => {
+        console.log('Connected to mongo database');
+    }, error => {
+        console.log('Connected to mongo database FAILED');
+        console.log(error);
+    })
+
+
 let app = express();
+
+app.use(bodyParser.json());
+
+
 app.use('/pairs', (request, response) => response.send(allPairs));
 app.use('/board/:number', (request, response) => {
     let boardNumber = request.params['number'];
@@ -23,8 +40,34 @@ app.use('/results/:id', (request, response) => {
         sum += mps
     }
 
-    response.send({ pairId, mps: sum, percentage: sum / 96 });
+    response.send({ pairId, mps: sum });
 });
+
+app.get('/tournament/:id', (request, response) => {
+    let id = request.params['id'];
+    console.log('tournamnet id:', id);
+    tournamentService.getTournamentById(id)
+        .then((model) => {
+            console.log('model', model);
+            response.status(200).send(model);
+        })
+        .catch(error => {
+            response.status(404).send(error);
+        });
+});
+
+app.post('/tournament', (request, response) => {
+    let data = request.body;
+    tournamentService.createNewTournament(data)
+        .then((model) => {
+            response.status(201).send(model);
+        })
+        .catch(error => {
+            response.status(400).send(error);
+        });
+});
+
+
 app.listen(3000);
 
 
