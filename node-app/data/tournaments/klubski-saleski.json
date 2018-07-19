@@ -1,6 +1,7 @@
 {
     "type": "howell4",
     "numberOfBoards": 28,
+    "scoring": "mp",
     "pairs": [
         { "id": 1, "players": [ "Irena JEZ", "Irena CIJAN"] },
         { "id": 2, "players": [ "Lina JELEN", "Nusa GOSNIK"] },

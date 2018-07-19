@@ -6,12 +6,14 @@ import { MatTableModule } from '@angular/material/table';
 import { AppComponent } from './app.component';
 import { ResultsTableComponent } from './components/tournament/results-table/results-table.component';
 import { PairMapperComponent } from './components/tournament/pair-mapper/pair-mapper.component';
+import { RoundsTableComponent } from './components/tournament/rounds-table/rounds-table.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ResultsTableComponent,
-        PairMapperComponent
+        PairMapperComponent,
+        RoundsTableComponent
     ],
     imports: [
         BrowserModule,

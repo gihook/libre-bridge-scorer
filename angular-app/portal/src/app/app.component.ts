@@ -9,11 +9,15 @@ import { TournamentService } from './services/tournament/tournament.service';
 export class AppComponent {
   title = 'app';
   results;
+  tables;
 
   constructor(private tournamentService: TournamentService) {
       this.tournamentService.getResults().subscribe(results => {
-        console.log(results);
         this.results = results;
+      });
+
+      this.tournamentService.rounds().subscribe(response => {
+          this.tables = response['tables'];
       });
   }
 }

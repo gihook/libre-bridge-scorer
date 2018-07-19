@@ -1,0 +1,52 @@
+{
+    "tables": [
+        {
+            "tableNumber": 1,
+            "rounds": [
+                { "number": 1, "ns": 8, "ew": 1, "boards": "1-4" },
+                { "number": 2, "ns": 8, "ew": 2, "boards": "5-8" },
+                { "number": 3, "ns": 8, "ew": 3, "boards": "9-12" },
+                { "number": 4, "ns": 8, "ew": 4, "boards": "13-16" },
+                { "number": 5, "ns": 8, "ew": 5, "boards": "17-20" },
+                { "number": 6, "ns": 8, "ew": 6, "boards": "21-24" },
+                { "number": 7, "ns": 8, "ew": 7, "boards": "25-28" }
+            ]
+        },
+        {
+            "tableNumber": 2,
+            "rounds": [
+                { "number": 1, "ns": 6, "ew": 5, "boards": "5-8" },
+                { "number": 2, "ns": 7, "ew": 6, "boards": "9-12" },
+                { "number": 3, "ns": 1, "ew": 7, "boards": "13-16" },
+                { "number": 4, "ns": 2, "ew": 1, "boards": "17-20" },
+                { "number": 5, "ns": 3, "ew": 2, "boards": "21-24" },
+                { "number": 6, "ns": 4, "ew": 3, "boards": "25-28" },
+                { "number": 7, "ns": 5, "ew": 4, "boards": "1-4" }
+            ]
+        },
+        {
+            "tableNumber": 3,
+            "rounds": [
+                { "number": 1, "ns": 4, "ew": 2, "boards": "9-12" },
+                { "number": 2, "ns": 5, "ew": 3, "boards": "13-16" },
+                { "number": 3, "ns": 6, "ew": 4, "boards": "17-20" },
+                { "number": 4, "ns": 7, "ew": 5, "boards": "21-24" },
+                { "number": 5, "ns": 1, "ew": 6, "boards": "25-28" },
+                { "number": 6, "ns": 2, "ew": 7, "boards": "1-4" },
+                { "number": 7, "ns": 3, "ew": 1, "boards": "5-8" }
+            ]
+        },
+        {
+            "tableNumber": 4,
+            "rounds": [
+                { "number": 1, "ns": 7, "ew": 3, "boards": "17-20" },
+                { "number": 2, "ns": 1, "ew": 4, "boards": "21-24" },
+                { "number": 3, "ns": 2, "ew": 5, "boards": "25-28" },
+                { "number": 4, "ns": 3, "ew": 6, "boards": "1-4" },
+                { "number": 5, "ns": 4, "ew": 7, "boards": "5-8" },
+                { "number": 6, "ns": 5, "ew": 1, "boards": "9-12" },
+                { "number": 7, "ns": 6, "ew": 2, "boards": "13-16" }
+            ]
+        }
+    ]
+}

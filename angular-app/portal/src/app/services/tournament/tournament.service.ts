@@ -11,4 +11,8 @@ export class TournamentService {
   getResults() {
       return this.http.get('/assets/klubski-saleski.json');
   }
+
+  rounds() {
+      return this.http.get('/assets/howell4-28.json');
+  }
 }

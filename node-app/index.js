@@ -43,6 +43,13 @@ app.use('/results/:id', (request, response) => {
     response.send({ pairId, mps: sum });
 });
 
+app.get('/tournament/:type/rounds', (request, response) => {
+    let tournamentType = request.params['type'];
+    const rounds = require('./data/tournament-definitions/howell4-28');
+
+    response.send(rounds);
+});
+
 app.get('/tournament/:id', (request, response) => {
     let id = request.params['id'];
     console.log('tournamnet id:', id);
