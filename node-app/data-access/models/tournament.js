@@ -11,15 +11,20 @@ let tournamentSchema = new Schema({
     }],
     boards: [{
         boardNumber: Number,
-        results: [{
-            nsPair: Number,
-            ewPair: Number,
-            contract: String,
-            declarer: String,
-            score: Number,
-            nsMps: Number,
-            ewMps: Number
-        }]
+        north: String,
+        south: String,
+        east: String,
+        west: String,
+    }],
+    results: [{
+        boardNumber: Number,
+        nsPair: Number,
+        ewPair: Number,
+        contract: String,
+        declarer: String,
+        score: Number,
+        nsMps: Number,
+        ewMps: Number
     }]
 });
 

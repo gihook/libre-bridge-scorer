@@ -1,5 +1,5 @@
-const mpCalculator = require('./matchPointsCalculator');
-const mockTournament = require('../data/tournaments/klubski-saleski.json');
+const mpCalculator = require('../../calculators/matchPointsCalculator');
+const mockTournament = require('../../data/tournaments/klubski-saleski.json');
 
 const calculateMpsForSingleBoard = mpCalculator.calculateMpsForSingleBoard
 const calculateMps = mpCalculator.calculateMps

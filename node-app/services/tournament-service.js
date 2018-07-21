@@ -13,4 +13,12 @@ const getTournamentById = id => {
     return tournamentRepository.getTournamentById(id);
 }
 
-module.exports = { createNewTournament, getTournamentById }
+const enterBoardResult = (tournamentId, result) => {
+    return tournamentRepository.enterBoardResult(tournamentId, result);
+}
+
+module.exports = {
+    createNewTournament,
+    getTournamentById,
+    enterBoardResult
+}

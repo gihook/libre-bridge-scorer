@@ -18,8 +18,32 @@ const getTournamentById = id => {
             if (error) reject(error);
 
             resolve(model);
-        })
+        });
     })
 }
 
-module.exports = { saveTournament, getTournamentById }
+const enterBoardResult = (tournamentId, result) => {
+    return new Promise((resolve, reject) => {
+        Tournament.findByIdAndUpdate(tournamentId, {
+            "$push": {
+                "boards[0].results": {
+                    result
+                }
+            }
+        }, {
+                upsert: true,
+                safe: true,
+                new: true
+            }, (error, model) => {
+                if (error) reject(error);
+
+                resolve(model);
+            });
+    });
+}
+
+module.exports = {
+    saveTournament,
+    getTournamentById,
+    enterBoardResult
+}
