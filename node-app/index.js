@@ -1,7 +1,7 @@
 const ws = require('ws');
 const http = require('http');
 const express = require('express');
-const tournamentData = require('./data/tournaments/klubski-saleski.json');
+const tournamentData = require('./data/tournaments/mock-service-data.json');
 const calculator = require('./calculators/matchPointsCalculator');
 const bodyParser = require('body-parser');
 
@@ -80,3 +80,15 @@ app.listen(3000);
 // server.listen(process.env.PORT || 8999, () => {
 //     console.log(`Server started on port ${server.address().port} :)`);
 // });
+
+
+console.log(tournamentData);
+
+const tournamentMapper = require('./services/tournament-mapper');
+
+let data = tournamentMapper.translateToMongooseModel(tournamentData)
+console.log(data)
+
+const fs = require('fs');
+
+fs.writeFileSync('./test.json', JSON.stringify(data, null, 4))

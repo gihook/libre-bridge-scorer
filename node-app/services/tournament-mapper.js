@@ -24,12 +24,39 @@ const translateToMongooseModel = serviceModel => {
         numberOfBoards: serviceModel.numberOfBoards,
         maxMps: serviceModel.maxMps,
         pairs: serviceModel.pairs,
+        boards: serviceModel.boards.map(b => {
+            return {
+                boardNumber: b.boardNumber
+            }
+        }),
         results: results
     };
+
 
     return mongooseModel;
 }
 
+const translateToServiceModel = mongooseModel => {
+    let boards = mongooseModel.boards;
+    let boardsWithResults = boards.map(board => {
+        let results = mongooseModel.results.filter(r => r.boardNumber == board.boardNumber);
+        board.results = results;
+
+        return board;
+    });
+
+    let serviceModel = {
+        type: mongooseModel.type,
+        numberOfBoards: mongooseModel.numberOfBoards,
+        maxMps: mongooseModel.maxMps,
+        pairs: mongooseModel.pairs,
+        boards: boardsWithResults
+    };
+
+    return serviceModel
+}
+
 module.exports = { 
-    translateToMongooseModel
+    translateToMongooseModel,
+    translateToServiceModel
 }
