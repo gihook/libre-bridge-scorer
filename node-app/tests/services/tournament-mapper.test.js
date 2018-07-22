@@ -2,7 +2,7 @@ const tournamentMapper = require('../../services/tournament-mapper')
 const serviceModel = require('../../data/tournaments/klubski-saleski.json')
 
 describe('Tournament mapper:', () => {
-    it('Should map type, numberOfBoards, maxMps', () => {
+    it('translateToMongooseModel should map type, numberOfBoards, maxMps', () => {
         let mongooseModel = tournamentMapper.translateToMongooseModel(serviceModel);
 
         expect(serviceModel.type).toBe(mongooseModel.type)
@@ -10,13 +10,13 @@ describe('Tournament mapper:', () => {
         expect(serviceModel.maxMps).toBe(mongooseModel.maxMps)
     })
 
-    it('Should map pairs', () => {
+    it('translateToMongooseModel should map pairs', () => {
         let mongooseModel = tournamentMapper.translateToMongooseModel(serviceModel);
 
         expect(serviceModel.pairs).toBe(mongooseModel.pairs)
     })
 
-    it('Should map results for the firs pair', () => {
+    it('translateToMongooseModel should map results for the firs pair', () => {
         let mongooseModel = tournamentMapper.translateToMongooseModel(serviceModel);
 
         let smResults = serviceModel.boards.filter(x => x.boardNumber == 1)[0].results;
@@ -31,5 +31,13 @@ describe('Tournament mapper:', () => {
         expect(smFirstPairResult.contract).toBe(mmFirstPairResult.contract);
         expect(smFirstPairResult.declarer).toBe(mmFirstPairResult.declarer);
         expect(smFirstPairResult.score).toBe(mmFirstPairResult.score);
+    })
+
+    it('translateToServiceModel should map type, numberOfBoards, maxMps', () => {
+        let serviceModel = tournamentMapper.translateToServiceModel(mongooseModel);
+
+        expect(serviceModel.type).toBe(mongooseModel.type)
+        expect(serviceModel.numberOfBoards).toBe(mongooseModel.numberOfBoards)
+        expect(serviceModel.maxMps).toBe(mongooseModel.maxMps)
     })
 })

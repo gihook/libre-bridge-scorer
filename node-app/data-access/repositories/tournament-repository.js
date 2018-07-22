@@ -23,11 +23,12 @@ const getTournamentById = id => {
 }
 
 const enterBoardResult = (tournamentId, result) => {
+    console.log(result);
     return new Promise((resolve, reject) => {
         Tournament.findByIdAndUpdate(tournamentId, {
             "$push": {
-                "boards[0].results": {
-                    result
+                "results": {
+                    score: result.score
                 }
             }
         }, {

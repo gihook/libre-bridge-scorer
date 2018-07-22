@@ -6,7 +6,7 @@ const calculator = require('./calculators/matchPointsCalculator');
 const bodyParser = require('body-parser');
 
 const dbProvider = require('./data-access/db-provider');
-const tournamentService = require('./services/tournament-service');
+// const tournamentService = require('./services/tournament-service');
 
 let allPairs = tournamentData.pairs;
 
@@ -43,55 +43,22 @@ app.use('/results/:id', (request, response) => {
     response.send({ pairId, mps: sum });
 });
 
-app.get('/tournament/:type/rounds', (request, response) => {
-    let tournamentType = request.params['type'];
-    const rounds = require('./data/tournament-definitions/howell4-28');
 
-    response.send(rounds);
-});
-
-app.get('/tournament/:id', (request, response) => {
-    let id = request.params['id'];
-    tournamentService.getTournamentById(id)
-        .then((model) => {
-            response.status(200).send(model);
-        })
-        .catch(error => {
-            response.status(404).send(error);
-        });
-});
-
-app.post('/tournament', (request, response) => {
-    let data = request.body;
-    tournamentService.createNewTournament(data)
-        .then((model) => {
-            response.status(201).send(model);
-        })
-        .catch(error => {
-            response.status(400).send(error);
-        });
-});
-
-app.post('/tournament/:tournamentId/board', (request, response) => {
-    let tournamentId = request.params['tournamentId'];
-    let result = request.body;
-    tournamentService.enterBoardResult(tournamentId, result)
-        .then((model) => {
-            response.status(201).send(model);
-        })
-        .catch(error => {
-            response.status(400).send(error);
-        });
-});
-
+const tournamentRouter = require('./routes/tournament');
+app.use(tournamentRouter);
 
 app.listen(3000);
 
 
-let server = http.createServer(app);
+// let server = http.createServer(app);
 // let webSocketServer = new ws.Server({ server });
 
 // webSocketServer.on('connection', socket => {
+//     event.addListener('test', () => {
+//         console.log('emitting test socket');
+//         socket.send('test event occured');
+//     })
+
 //     socket.on('message', message => {
 //         console.log('received: %s', message);
 //         let m = JSON.parse(message);
