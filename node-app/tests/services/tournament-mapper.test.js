@@ -2,7 +2,8 @@ const tournamentMapper = require('../../services/tournament-mapper')
 
 const mockServiceModel = require('../../data/tournaments/mock-service-data.json')
 const mockMongooseModel = require('../../data/tournaments/mock-mongoose-data.json');
-const mongooseModel = tournamentMapper.translateToMongooseModel(mockServiceModel);
+const mongooseModel = tournamentMapper.toMongooseModel(mockServiceModel);
+const serviceModel = tournamentMapper.toServiceModel(mockMongooseModel);
 
 describe('Tournament mapper:', () => {
     it('translateToMongooseModel should map type, numberOfBoards, maxMps', () => {
@@ -31,8 +32,6 @@ describe('Tournament mapper:', () => {
     })
 
     it('translateToServiceModel should map type, numberOfBoards, maxMps', () => {
-        let serviceModel = tournamentMapper.translateToServiceModel(mockMongooseModel);
-
         expect(serviceModel.type).toBe(mongooseModel.type)
         expect(serviceModel.numberOfBoards).toBe(mongooseModel.numberOfBoards)
         expect(serviceModel.maxMps).toBe(mongooseModel.maxMps)
@@ -40,14 +39,10 @@ describe('Tournament mapper:', () => {
 
 
     it('translateToServiceModel should map pairs', () => {
-        let serviceModel = tournamentMapper.translateToServiceModel(mockMongooseModel);
-
         expect(serviceModel.pairs).toEqual(mongooseModel.pairs)
     })
 
     it('translateToServiceModel should map results for the firs pair', () => {
-        let serviceModel = tournamentMapper.translateToServiceModel(mockMongooseModel);
-
         let smResults = serviceModel.boards.filter(x => x.boardNumber == 1)[0].results;
         let mmResults = mockMongooseModel.results.filter(x => x.boardNumber == 1);
 

@@ -1,4 +1,4 @@
-const translateToMongooseModel = serviceModel => {
+const toMongooseModel = serviceModel => {
     let resultsPerBoard = serviceModel.boards.map(board => {
         let boardResults = board.results;
 
@@ -36,7 +36,7 @@ const translateToMongooseModel = serviceModel => {
     return mongooseModel;
 }
 
-const translateToServiceModel = mongooseModel => {
+const toServiceModel = mongooseModel => {
     let boards = mongooseModel.boards;
     let boardsWithResults = boards.map(board => {
         let results = mongooseModel.results.filter(r => r.boardNumber == board.boardNumber);
@@ -57,6 +57,6 @@ const translateToServiceModel = mongooseModel => {
 }
 
 module.exports = { 
-    translateToMongooseModel,
-    translateToServiceModel
+    toMongooseModel,
+    toServiceModel
 }
