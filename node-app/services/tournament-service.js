@@ -1,4 +1,5 @@
 const tournamentRepository = require('../data-access/repositories/tournament-repository');
+const tournamentDefinition = require('../data/tournament-definitions/howell4-28.json');
 
 const createNewTournament = data => {
     let numberOfBoards = data.numberOfBoards;

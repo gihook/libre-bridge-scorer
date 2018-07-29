@@ -39,7 +39,7 @@ describe('Tournament mapper:', () => {
 
 
     it('translateToServiceModel should map pairs', () => {
-        expect(serviceModel.pairs).toEqual(mongooseModel.pairs)
+        expect(serviceModel.pairs).toEqual(mongooseModel.pairs);
     })
 
     it('translateToServiceModel should map results for the firs pair', () => {

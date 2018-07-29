@@ -82,12 +82,9 @@ app.listen(3000);
 // });
 
 
-console.log(tournamentData);
-
 const tournamentMapper = require('./services/tournament-mapper');
 
-let data = tournamentMapper.translateToMongooseModel(tournamentData)
-console.log(data)
+let data = tournamentMapper.toMongooseModel(tournamentData);
 
 const fs = require('fs');
 

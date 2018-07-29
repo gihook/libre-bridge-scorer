@@ -3,14 +3,6 @@ const tournamentService = require('../../services/tournament-service');
 
 const router = express.Router();
 
-// TODO: Should be refactored into separate route
-router.get('/tournament/:type/rounds', (request, response) => {
-    let tournamentType = request.params['type'];
-    const rounds = require('./data/tournament-definitions/howell4-28');
-
-    response.send(rounds);
-});
-
 router.get('/tournament/:id', (request, response) => {
     let id = request.params['id'];
     tournamentService.getTournamentById(id)
