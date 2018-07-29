@@ -10,7 +10,7 @@ const dbProvider = require('./data-access/db-provider');
 
 let allPairs = tournamentData.pairs;
 
-dbProvider.registerDb('mongodb://localhost/libre-bridge-test')
+dbProvider.registerDb('mongodb://localhost:27017/libre-bridge-test')
     .then(() => {
         console.log('Connected to mongo database');
     }, error => {
