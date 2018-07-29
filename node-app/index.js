@@ -45,7 +45,9 @@ app.use('/results/:id', (request, response) => {
 
 
 const tournamentRouter = require('./routes/tournament');
+const roundsRouter = require('./routes/tournament/rounds');
 app.use(tournamentRouter);
+app.use(roundsRouter);
 
 app.listen(3000);
 
