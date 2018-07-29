@@ -82,10 +82,10 @@ app.listen(3000);
 // });
 
 
-const tournamentMapper = require('./services/tournament-mapper');
+// const tournamentMapper = require('./services/tournament-mapper');
 
-let data = tournamentMapper.toMongooseModel(tournamentData);
+// let data = tournamentMapper.toMongooseModel(tournamentData);
 
-const fs = require('fs');
+// const fs = require('fs');
 
-fs.writeFileSync('./test.json', JSON.stringify(data, null, 4))
+// fs.writeFileSync('./test.json', JSON.stringify(data, null, 4))
