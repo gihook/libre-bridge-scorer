@@ -1,13 +1,16 @@
 const tournamentRepository = require('../data-access/repositories/tournament-repository');
-const tournamentDefinition = require('../data/tournament-definitions/howell4-28.json');
+const tournamentDefinitionProvider = require('../providers/tournament-definition-provider');
 const _ = require('underscore');
 
 const createNewTournament = data => {
     const numberOfBoards = data.numberOfBoards;
     data.boards = [];
     data.results = [];
+
     for (let i = 1; i <= numberOfBoards; i++)
         data.boards.push({ boardNumber: i });
+
+    const tournamentDefinition = tournamentDefinitionProvider.getDefinition(data.type);
 
     for (let table of tournamentDefinition.tables) {
         for (let round of table.rounds) {
