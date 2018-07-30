@@ -1,40 +1,24 @@
 const express = require('express');
-const tournamentService = require('../../services/tournament-service');
+const c = require('../../util/controller-handler');
+const tournmentController = require('../../controllers/tournament-controller');
 
 const router = express.Router();
 
-router.get('/tournament/:id', (request, response) => {
-    let id = request.params['id'];
-    tournamentService.getTournamentById(id)
-        .then((model) => {
-            response.status(200).send(model);
-        })
-        .catch(error => {
-            response.status(404).send(error);
-        });
-});
+router.get('/tournament/:id', c(tournmentController.getTournamentById, request => [
+    request.params['id']
+]));
 
-router.post('/tournament', (request, response) => {
-    let data = request.body;
-    tournamentService.createNewTournament(data)
-        .then((model) => {
-            response.status(201).send(model);
-        })
-        .catch(error => {
-            response.status(400).send(error);
-        });
-});
+router.post('/tournament', c(tournmentController.createNewTournament, request => [
+    request.body
+]));
 
-router.post('/tournament/:tournamentId/board', (request, response) => {
-    let tournamentId = request.params['tournamentId'];
-    let result = request.body;
-    tournamentService.enterBoardResult(tournamentId, result)
-        .then((model) => {
-            response.status(201).send(model);
-        })
-        .catch(error => {
-            response.status(400).send(error);
-        });
-});
+router.post('/tournament/:tournamentId/board', c(tournmentController.enterResult, request => [
+    request.params['tournamentId'],
+    request.body
+]));
+
+router.get('/tournament/:tournamentId/board/:boardNumber', c(tournmentController.boardResults, request => [
+    request.params['tournamentId'], request.body
+]));
 
 module.exports = router;

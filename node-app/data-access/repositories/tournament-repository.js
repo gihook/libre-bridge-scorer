@@ -27,6 +27,8 @@ const enterBoardResult = (tournamentId, result) => {
         Tournament.findByIdAndUpdate(tournamentId, {
             "$push": {
                 "results": {
+                    contract: result.contract,
+                    declarer: result.declarer,
                     score: result.score
                 }
             }
@@ -43,8 +45,19 @@ const enterBoardResult = (tournamentId, result) => {
     });
 }
 
+const boardResults = (tournamentId) => {
+    return new Promise((resolve, reject) => {
+        Tournament.findById(tournamentId, 'results', (error, data) => {
+            if (error) reject(error);
+
+            resolve(data.toObject());
+        });
+    });
+}
+
 module.exports = {
     saveTournament,
     getTournamentById,
-    enterBoardResult
+    enterBoardResult,
+    boardResults
 }

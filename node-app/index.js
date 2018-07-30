@@ -6,7 +6,6 @@ const calculator = require('./calculators/matchPointsCalculator');
 const bodyParser = require('body-parser');
 
 const dbProvider = require('./data-access/db-provider');
-// const tournamentService = require('./services/tournament-service');
 
 let allPairs = tournamentData.pairs;
 

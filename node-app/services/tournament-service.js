@@ -45,8 +45,14 @@ const enterBoardResult = (tournamentId, result) => {
     return tournamentRepository.enterBoardResult(tournamentId, result);
 }
 
+const boardResults = async (tournamentId, boardNumber) => {
+    const data = await tournamentRepository.boardResults(tournamentId);
+    return data.results.filter(x => x.boardNumber == boardNumber);
+}
+
 module.exports = {
     createNewTournament,
     getTournamentById,
-    enterBoardResult
+    enterBoardResult,
+    boardResults
 }
